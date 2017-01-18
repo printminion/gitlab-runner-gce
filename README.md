@@ -83,7 +83,7 @@ gcloud compute instances create "project-nat" \
 --project=$PROJECT_ID \
 --description="NATs outgoing internet for nodes" \
 --machine-type "f1-micro" --can-ip-forward \
---image "/debian-cloud/debian-8-jessie-v20160803" \
+--image "https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-8-jessie-v20170110" \
 --tags "project-nat" --metadata-from-file "startup-script=startup-scripts/configure-nat-gw.sh"
 
 gcloud compute routes create "no-ip-internet-route" \
